@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+{{ $title := printf "%s | %s" .Title site.Title }}
+{{ if .IsHome }}
+  {{ $title = site.Title }}
+{{ else if .IsPage }}
+  {{ $title = .Title }}
+{{ end }}
+<title>{{ $title }}</title>
+{{ with partial "functions/description" . }}
+  <meta name="description" content="{{ . }}">
+{{ end }}
+{{ if .Keywords }}
+  <meta name="keywords" content="{{ delimit .Keywords ", " }}">
+{{ else if and .IsHome site.Params.keywords }}
+  <meta name="keywords" content="{{ delimit site.Params.keywords ", " }}">
+{{ else if .GetTerms "tags" }}
+  <meta name="keywords" content="{{ (index (.GetTerms "tags") 0).Title }}{{ range after 1 (.GetTerms "tags") }}, {{ .Title }}{{ end }}">
+{{ end }}
+{{ hugo.Generator }}
+{{ if .Params.author }}
+  <meta name="author" content="{{ .Params.author }}">
+  {{ if .Params.authorLink }}
+    <link rel="author" href="{{ .Params.authorLink }}">
+  {{ end }}
+{{ else if site.Params.author }}
+  <meta name="author" content="{{ site.Params.author }}">
+  {{ if site.Params.authorLink }}
+    <link rel="author" href="{{ site.Params.authorLink }}">
+  {{ end }}
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "rss" }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $title | safeHTML }}
+{{ end }}
+{{ with .Site.Config.Sitemap }}
+  {{ if not .Disable }}
+    <link rel="sitemap" type="application/xml" href="{{ .Filename | relURL }}">
+  {{ end }}
+{{ end }}
