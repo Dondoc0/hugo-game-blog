@@ -4,3 +4,6 @@
 [submodule "themes/mainroad"]
 	path = themes/mainroad
 	url = https://github.com/vimux/mainroad.git
+[submodule "nagoya"]
+	path = themes/nagoya
+	url = https://github.com/curegit/nagoya.git

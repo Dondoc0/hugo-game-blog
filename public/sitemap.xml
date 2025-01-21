@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/2025/01/bdo-20250103-info-and-fishing/</loc>
+    <loc>http://localhost:1313/mmorpg/</loc>
+    <lastmod>2025-01-03T23:00:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/mmorpg/bdo/</loc>
+    <lastmod>2025-01-03T23:00:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/mmorpg/bdo/play-log-20250103/</loc>
     <lastmod>2025-01-03T23:00:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -11,19 +17,18 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-03T23:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-01-03T23:00:00+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/%E9%BB%92%E3%81%84%E7%A0%82%E6%BC%A0/</loc>
     <lastmod>2025-01-03T23:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2025/01/bdo-20250102-fairy-system/</loc>
+    <loc>http://localhost:1313/mmorpg/bdo/fairy-system/</loc>
     <lastmod>2025-01-02T23:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2025/01/bdo-20250101-start-season-character/</loc>
+    <loc>http://localhost:1313/mmorpg/bdo/start-season-character/</loc>
     <lastmod>2025-01-01T23:00:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>
