@@ -1,0 +1,29 @@
+{{ define "eager-paginate" }}
+  {{ $paginator := .Paginate (partial "functions/filter-articles" site.RegularPages) }}
+{{ end }}
+
+{{ define "main" }}
+  {{ $paginator := .Paginator }}
+  {{ if eq $paginator.PageNumber 1 }}
+    {{ if or .Title .Content }}
+      <div class="single">
+        {{ with .Content }}
+          <div class="body">
+            {{ . }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ else }}
+    <header>
+      <small class="page-num">
+        {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} ページ
+      </small>
+    </header>
+  {{ end }}
+  {{ partial "components/article-list" $paginator.Pages }}
+{{ end }}
+
+{{ define "page-nav" }}
+  {{ partial "components/paginator" . }}
+{{ end }}

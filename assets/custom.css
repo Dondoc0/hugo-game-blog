@@ -14,6 +14,49 @@ footer#bottom {
     color: #555;
 }
 
+.toc {
+    border-radius: 4px;
+}
+
+.single :not(pre)>code {
+    border-radius: 4px;
+}
+
+.single pre {
+    border-radius: 4px;
+}
+
+.single .link-card {
+    border-radius: 4px;
+}
+
+.thumbnail {
+    border-radius: 12px;
+}
+
+@container (min-width: 620px) {
+    .thumbnail {
+        min-width: 10%;
+        max-width: 40%;
+        max-height: max(60vh, 120cqw);
+        margin: 4px 18px 6px 0;
+        border-radius: 6px;
+        float: left;
+    }
+
+    article:not(:has(.summary)) .thumbnail {
+        max-width: 100%;
+        margin: 4px 0 6px;
+        border-radius: 6px;
+    }
+}
+
+.prev-next>a {
+    display: block;
+    background: linear-gradient(0deg, #ffffff70, #ffffffbf);
+    padding: 10px 10px 10px 13px;
+    border-radius: 8px;
+}
 
 @container (min-width: 540px) {
     header#top #header-grid {
@@ -29,5 +72,14 @@ footer#bottom {
         grid-template-columns: minmax(300px, auto) 320px;
         column-gap: 30px;
         font-size: .85rem;
+    }
+
+    .pane {
+        border-radius: 4px;
+    }
+
+    .prev-next>a {
+        padding: 16px;
+        border-radius: 4px;
     }
 }
