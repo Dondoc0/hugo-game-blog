@@ -1,5 +1,33 @@
+div#container {
+    background-color: #e5e5e5;
+}
+
 .single p {
     padding-left: 0;
     padding-right: 0;
     text-indent: 0;
+}
+
+footer#bottom {
+    background-color: #e5e5e5;
+    border-top-color: #e5e5e5;
+    color: #555;
+}
+
+
+@container (min-width: 540px) {
+    header#top #header-grid {
+        padding-top: 0px;
+    }
+}
+
+@container (min-width: 1140px) {
+    div#middle {
+        max-width: 1240px;
+        margin: 30px auto 36px;
+        padding: 0 40px;
+        grid-template-columns: minmax(300px, auto) 320px;
+        column-gap: 30px;
+        font-size: .85rem;
+    }
 }
