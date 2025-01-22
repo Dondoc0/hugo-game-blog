@@ -2,7 +2,7 @@
 date            = "{{ .Date }}"
 draft           = true
 title           = "{{ replace .File.ContentBaseName '-' '' | title }}"
-slug            = ""
+slug            = "example-slug"
 images          = ["hoge"]
 categories      = ["other"]
 isCJKLanguage   = true
